@@ -1,0 +1,60 @@
+// 1.tính năng tạo biến 
+// $main-color: orange;
+// 2. khả năng chia cắt thành các module nhỏ hơn
+@import 'variables';
+@import 'header';
+@import 'mixins';
+//3. viết mixin trong css, nó như 1 hàm..., gọi nó bằng tên mixin
+// @mixin buttonStyle {
+//     background: $main-color;
+//     border: 0;
+//     padding: 5px 10px;
+//     color: white;
+// }
+
+section button {
+    @include buttonStyle();
+    background: green;
+}
+
+footer {
+    background-color: pink;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// 4. Khả năng lồng nhau thay vì viết 
+// footer button {
+//     @include buttonStyle();
+// }
+// => nhìn sẽ dễ hiểu hơn 
+
+footer {
+    button{
+        @include buttonStyle();
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+// 5. Tính thừa kế hoạt động giống mixins, gộp chung nếu dùng chung 
+
+%buttonStyle {
+    background: $main-color;
+    border: 0;
+    padding: 5px 10px;
+    color: white;
+}
+
+.button1 {
+    @extend %buttonStyle;
+}
+
+.button2 {
+    @extend %buttonStyle;
+}

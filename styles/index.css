@@ -1,0 +1,41 @@
+header {
+  background-color: orange;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+section button {
+  background: orange;
+  border: 0;
+  padding: 5px 10px;
+  color: white;
+  background: green;
+}
+
+footer {
+  background-color: pink;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer button {
+  background: orange;
+  border: 0;
+  padding: 5px 10px;
+  color: white;
+}
+footer p {
+  font-size: 20px;
+}
+
+.button2, .button1 {
+  background: orange;
+  border: 0;
+  padding: 5px 10px;
+  color: white;
+}/*# sourceMappingURL=index.css.map */
